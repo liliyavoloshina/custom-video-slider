@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Video Player by Liliya Voloshina</title>
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+  <div class="preload-images"></div>
+  <div class="loader">
+    <div class="lds-spinner">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="slider-wrapper">
+      <div class="slide active"><video class="video" src="./video/day.mp4" preload="auto" loop></video></div>
+      <div class="slide"><video class="video" src="./video/night.mp4" preload="auto" loop></video></div>
+      <div class="slide"><video class="video" src="./video/taverns.mp4" preload="auto" loop></video></div>
+
+      <button id="prev" class="arrows prev btn" title="Prev Video" tabindex="-1"></button>
+      <button id="next" class="arrows next btn" title="Next Video" tabindex="-1"></button>
+      <button class="play-lg btn" id="playLg" title="Play / Pause Video" tabindex="-1"></button>
+      <div class="speed-new"></div>
+      <div class="speed-incr speed-icon"></div>
+      <div class="speed-decr speed-icon"></div>
+    </div>
+
+    <div class="controls">
+      <button class="play-sm btn" id="playSm" title="Play / Pause Video"></button>
+      <div class="progress-bar">
+        <div class="progress-bar-filled"></div>
+      </div>
+      <div class="volume-area">
+        <button class="volume-mute btn" id="mute" title="Mute / Unmute Video"></button>
+        <input class="volume-range range" min="0.1" id="volume" type="range" name="volume"  max="1" value="0.5" step="0.1"
+          title="Volume Regulation">
+      </div>
+      <button class="fullscreen btn" id="fullscreen" title="Fullscreen Video"></button>
+    </div>
+  </div>
+
+  <script src="./js/script.js"></script>
+</body>
+
+</html>
